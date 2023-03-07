@@ -1,0 +1,12 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
+
+version: '3.4'
+
+services:
+  moviewebapi:
+    image: moviewebapi
+    build:
+      context: .
+      dockerfile: Movie-Web-API/Movie-Web-API/Movie-Web-API/Dockerfile
+    ports:
+      - 5000:5000
